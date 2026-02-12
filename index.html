@@ -10,12 +10,22 @@
         :root { --azul: #0061ff; --negro: #0a0a0a; --blanco: #ffffff; }
         html { scroll-behavior: smooth; }
         body { font-family: 'Segoe UI', sans-serif; background: var(--negro); color: var(--blanco); margin: 0; text-align: center; }
+        
         header { 
             height: 40vh; display: flex; flex-direction: column; justify-content: center; align-items: center; 
             background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=2070&auto=format&fit=crop') center/cover;
         }
+
+        /* BOTÓN CON ANIMACIÓN */
+        .btn-reservar-top { 
+            background: var(--azul); color: white; padding: 18px 40px; border-radius: 50px; 
+            text-decoration: none; font-weight: bold; margin-top: 20px; display: inline-block;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0, 97, 255, 0.4);
+        }
+        .btn-reservar-top:active { transform: scale(0.95); }
+
         .seccion-intro { padding: 40px 20px; max-width: 800px; margin: 0 auto; }
-        
         .texto-largo { font-size: 1.15rem; line-height: 1.8; color: #ccc; text-align: justify; background: #111; padding: 30px; border-radius: 15px; border-left: 5px solid var(--azul); margin-bottom: 30px; }
         .texto-largo b { color: var(--azul); }
 
@@ -23,14 +33,16 @@
         .tabla-precios th, .tabla-precios td { padding: 18px; text-align: left; border-bottom: 1px solid #333; }
         .tabla-precios th { background: var(--azul); color: white; }
 
-        /* DISEÑO DE PASOS ESTILO CAPI TURNOS */
         .contenedor-pasos { background: white; color: #333; padding: 30px; border-radius: 20px; text-align: left; max-width: 500px; margin: 0 auto 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
         .contenedor-pasos h2 { color: var(--azul); text-align: center; margin-top: 0; }
-        .paso-item { margin-bottom: 20px; line-height: 1.5; }
-        .paso-item b { color: #000; }
-        .alerta-roja { color: #d9534f; font-weight: bold; text-decoration: underline; }
+        .alerta-roja { color: #d9534f; font-weight: bold; border: 1px solid #d9534f; padding: 10px; border-radius: 10px; text-align: center; }
 
-        .booking-card { background: white; color: #333; max-width: 450px; margin: 0 auto 100px; border-radius: 20px; overflow: hidden; text-align: left; box-shadow: 0 15px 50px rgba(0,0,0,0.6); }
+        .booking-card { background: white; color: #333; max-width: 450px; margin: 0 auto 100px; border-radius: 20px; overflow: hidden; text-align: left; }
+        
+        /* MES CON FLECHITAS */
+        .mes-selector { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; background: #f8f9fa; border-bottom: 1px solid #ddd; font-weight: bold; }
+        .flecha { cursor: pointer; color: var(--azul); font-size: 1.5rem; padding: 0 10px; }
+
         .p-20 { padding: 25px; }
         .days-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
         .day { padding: 12px 0; text-align: center; background: #ebf3ff; color: var(--azul); border-radius: 50%; cursor: pointer; font-weight: bold; }
@@ -45,12 +57,13 @@
     <header>
         <h1 style="font-size: 3.5rem; margin:0;">KENTZ BARBER</h1>
         <p style="letter-spacing: 3px;">ESTILO PROFESIONAL</p>
+        <a href="#pasos-reserva" class="btn-reservar-top">RESERVAR TURNO</a>
     </header>
 
     <section class="seccion-intro">
         <div class="texto-largo">
-            <p><b>¿Estás buscando un corte común o una identidad real?</b> En <b>Kentz Barbería</b> nos enfocamos en que cada cliente encuentre su mejor versión. Sabemos que tu imagen es tu carta de presentación, por eso metemos precisión quirúrgica en cada degradado y perfilado de barba.</p>
-            <p>Usamos las mejores herramientas y técnicas de vanguardia para asegurar que salgas impecable. Ya sea un cambio de look radical con <b>colorimetría profesional</b> o un fade clásico, acá la calidad no se negocia. <b>Elegí profesionalismo, elegí calidad, elegí Kentz.</b></p>
+            <p><b>¿Estás buscando un corte común o una identidad real?</b> En <b>Kentz Barbería</b> nos enfocamos en que cada cliente encuentre su mejor versión. Precisión quirúrgica en cada degradado y perfilado de barba.</p>
+            <p>Técnicas de vanguardia para asegurar que salgas impecable. Especialistas en <b>colorimetría profesional ($30.000)</b> y fade clásico. <b>Elegí profesionalismo, elegí calidad, elegí Kentz.</b></p>
         </div>
 
         <table class="tabla-precios">
@@ -60,32 +73,22 @@
             <tr><td>Corte + Color</td><td>$30.000</td></tr>
         </table>
 
-        <div class="contenedor-pasos">
-            <h2>Reservar Turnos</h2>
-            <p style="text-align:center; color:#666;">Sigue los siguientes pasos para reservar correctamente:</p>
-            
-            <div class="paso-item">
-                <b>Paso 1:</b> Reservar tu día del calendario virtual.
-            </div>
-            
-            <div class="paso-item">
-                <b>Paso 2:</b> Reservar hora disponible.
-            </div>
-
-            <div class="paso-item">
-                <b>Paso 3:</b> Poner tu información personal (Nombre y WhatsApp).
-            </div>
-
-            <div class="paso-item">
-                <b>Paso 4:</b> Pagar seña de $1.000 para asegurar tu lugar.
-            </div>
-
-            <p class="alerta-roja" style="text-align:center; border: 1px solid #d9534f; padding: 10px; border-radius: 10px;">
-                IMPORTANTE: Es obligatorio pagar la seña para confirmar el turno.
-            </p>
+        <div id="pasos-reserva" class="contenedor-pasos">
+            <h2>Pasos para Reservar</h2>
+            <p><b>1.</b> Reservar tu día.<br>
+               <b>2.</b> Reservar hora disponible.<br>
+               <b>3.</b> Poner tu información.<br>
+               <b>4.</b> Pagar seña de $1.000.</p>
+            <p class="alerta-roja">IMPORTANTE: Es obligatorio pagar la seña.</p>
         </div>
 
-        <div id="agendar" class="booking-card">
+        <div class="booking-card">
+            <div class="mes-selector">
+                <span class="flecha">❮</span>
+                <span>FEBRERO 2026</span>
+                <span class="flecha">❯</span>
+            </div>
+
             <div class="p-20" id="p1">
                 <p><b>Seleccioná el día:</b></p>
                 <div class="days-grid">
@@ -108,21 +111,17 @@
             </div>
 
             <div class="p-20" id="p3" style="display:none;">
-                <p><b>Completá tus datos:</b></p>
+                <p><b>Tus Datos:</b></p>
                 <input type="text" id="nombre" placeholder="Nombre completo">
                 <input type="tel" id="tel" value="+54 ">
-                <input type="email" id="email" placeholder="Tu Email">
-                
+                <input type="email" id="email" placeholder="Email">
                 <button class="btn-final" onclick="enviar()">Confirmar Reserva</button>
             </div>
 
             <div class="p-20" id="fin">
-                <div style="font-size: 50px; color: #28a745; text-align: center;">✔</div>
-                <h2 style="color:green; text-align: center;">¡Solicitud Enviada!</h2>
+                <h2 style="color:green;">¡Solicitud Enviada!</h2>
                 <p>Día: <b id="rf"></b>/02 | Hora: <b id="rh"></b> hs.</p>
-                <p style="background:#fff5f5; padding:10px; border-radius:8px; border: 1px solid #ff4d4d; color:#b30000;">
-                    <b>Atención:</b> El turno queda confirmado únicamente al enviar el comprobante de la seña por WhatsApp.
-                </p>
+                <p>Mandá el comprobante de la seña para confirmar.</p>
             </div>
         </div>
     </section>
@@ -133,7 +132,7 @@
         function irForm(h){ hSel=h; document.getElementById('p2').style.display='none'; document.getElementById('p3').style.display='block'; }
         function enviar(){
             const n = document.getElementById('nombre').value; const e = document.getElementById('email').value;
-            if(!n || !e) return alert("Por favor, completa tus datos.");
+            if(!n || !e) return alert("Completá tus datos");
             emailjs.send("service_3ouqxdc", "template_09ypwqn", { user_name: n, user_phone: document.getElementById('tel').value, fecha: dSel, hora: hSel });
             emailjs.send("service_3ouqxdc", "template_s8qcvym", { user_name: n, user_email: e, fecha: dSel, hora: hSel }).then(() => {
                 document.getElementById('rf').innerText = dSel; document.getElementById('rh').innerText = hSel;

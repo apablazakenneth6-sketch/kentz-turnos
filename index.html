@@ -10,101 +10,93 @@
         :root { --azul: #0061ff; --negro: #0a0a0a; --blanco: #ffffff; }
         html { scroll-behavior: smooth; }
         body { font-family: 'Segoe UI', sans-serif; background: var(--negro); color: var(--blanco); margin: 0; text-align: center; }
-        
-        /* HEADER CON FONDO DE BARBERÍA */
         header { 
-            height: 50vh; 
-            display: flex; flex-direction: column; justify-content: center; align-items: center; 
+            height: 40vh; display: flex; flex-direction: column; justify-content: center; align-items: center; 
             background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=2070&auto=format&fit=crop') center/cover;
         }
-        .btn-azul { background: var(--azul); color: white; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; cursor: pointer; border: none; display: inline-block; margin-top: 20px; font-size: 1.1rem; }
-
+        .btn-azul { background: var(--azul); color: white; padding: 18px 40px; border-radius: 50px; text-decoration: none; font-weight: bold; cursor: pointer; border: none; display: inline-block; margin-top: 20px; }
         .seccion-intro { padding: 40px 20px; max-width: 800px; margin: 0 auto; }
-        
-        /* TEXTO QUE ATRAPA CLIENTES */
-        .texto-largo { font-size: 1.2rem; line-height: 1.8; color: #ddd; text-align: justify; background: #161616; padding: 30px; border-radius: 15px; border-left: 5px solid var(--azul); box-shadow: 0 10px 20px rgba(0,0,0,0.5); }
-        .texto-largo b { color: var(--azul); }
-
-        .tabla-precios { width: 100%; max-width: 600px; margin: 40px auto; border-collapse: collapse; background: #1a1a1a; border-radius: 10px; overflow: hidden; }
-        .tabla-precios th, .tabla-precios td { padding: 18px; text-align: left; border-bottom: 1px solid #333; }
-        .tabla-precios th { background: var(--azul); color: white; font-size: 1.2rem; }
-
-        .booking-card { background: white; color: #333; max-width: 450px; margin: 50px auto 100px; border-radius: 20px; overflow: hidden; text-align: left; box-shadow: 0 15px 50px rgba(0,0,0,0.6); }
+        .texto-largo { font-size: 1.1rem; line-height: 1.6; color: #ddd; text-align: justify; background: #161616; padding: 25px; border-radius: 15px; border-left: 5px solid var(--azul); }
+        .tabla-precios { width: 100%; max-width: 600px; margin: 30px auto; border-collapse: collapse; background: #1a1a1a; border-radius: 10px; overflow: hidden; }
+        .tabla-precios th, .tabla-precios td { padding: 15px; text-align: left; border-bottom: 1px solid #333; }
+        .tabla-precios th { background: var(--azul); color: white; }
+        .booking-card { background: white; color: #333; max-width: 450px; margin: 40px auto 100px; border-radius: 20px; overflow: hidden; text-align: left; box-shadow: 0 15px 50px rgba(0,0,0,0.6); }
         .p-20 { padding: 25px; }
         .days-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
         .day { padding: 12px 0; text-align: center; background: #ebf3ff; color: var(--azul); border-radius: 50%; cursor: pointer; font-weight: bold; }
         .day.off { color: #ccc; text-decoration: line-through; cursor: default; background: none; }
         .slot { border: 2px solid var(--azul); color: var(--azul); padding: 14px; border-radius: 12px; text-align: center; margin-bottom: 12px; font-weight: bold; cursor: pointer; }
         input { width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 10px; box-sizing: border-box; font-size: 16px; }
-        .btn-final { background: var(--azul); color: white; width: 100%; padding: 18px; border: none; border-radius: 30px; font-weight: bold; font-size: 1.1rem; cursor: pointer; }
-        
-        #fin { display: none; text-align: center; padding: 20px; }
+        .btn-final { background: var(--azul); color: white; width: 100%; padding: 18px; border: none; border-radius: 30px; font-weight: bold; cursor: pointer; font-size: 1.1rem; }
+        .aviso-importante { background: #fff5f5; border: 2px solid #ff4d4d; color: #b30000; padding: 15px; border-radius: 10px; margin-bottom: 20px; font-size: 0.95rem; }
+        #fin { display: none; text-align: center; }
     </style>
 </head>
 <body>
-
     <header>
-        <h1 style="font-size: 3.5rem; margin:0;">KENTZ BARBER</h1>
-        <p style="letter-spacing: 3px; font-size: 1.2rem;">ESTILO PROFESIONAL</p>
+        <h1 style="font-size: 3rem; margin:0;">KENTZ BARBER</h1>
+        <p style="letter-spacing: 2px;">ESTILO PROFESIONAL</p>
         <a href="#agendar" class="btn-azul">RESERVAR TURNO</a>
     </header>
 
     <section class="seccion-intro">
         <div class="texto-largo">
-            <p><b>¿Estás buscando un corte común o una identidad real?</b></p>
-            <p>En <b>Kentz Barbería</b> nos enfocamos en que cada cliente encuentre su mejor versión. Sabemos que tu imagen es tu carta de presentación, por eso metemos precisión quirúrgica en cada degradado y perfilado de barba. No somos solo una barbería, somos el lugar donde venís a recuperar tu confianza.</p>
-            <p>Usamos las mejores herramientas y técnicas de vanguardia para asegurar que salgas impecable. <b>Elegí profesionalismo, elegí calidad, elegí Kentz.</b> Tu estilo no es un juego, dejalo en manos de expertos.</p>
+            <b>¿Buscás un corte común o una identidad real?</b> En Kentz Barbería nos enfocamos en que encuentres tu mejor versión. Calidad garantizada.
         </div>
-
         <table class="tabla-precios">
             <tr><th>Servicio</th><th>Precio</th></tr>
             <tr><td>Corte Solo</td><td>$5000</td></tr>
             <tr><td>Corte + Barba</td><td>$6000</td></tr>
-            <tr><td>Corte con Color</td><td>$30000</td></tr>
         </table>
     </section>
 
     <div id="agendar" class="booking-card">
         <div style="background:#f8f9fa; padding:15px; text-align:center; border-bottom: 1px solid #ddd;">
-            <h3 style="margin:0;">Agendar Turno Online</h3>
+            <h3 style="margin:0;">Pasos para tu Reserva</h3>
         </div>
 
         <div class="p-20" id="p1">
-            <p><b>1. Elegí tu día (Febrero)</b></p>
+            <p><b>1. Reservar tu día (Febrero)</b></p>
             <div class="days-grid">
                 <script>
-                    for(let d=1; d<=28; d++){
-                        let cl = d < 15 ? 'day off' : 'day';
-                        document.write(`<div class="${cl}" onclick="if('${cl}'=='day') irHora(${d})">${d}</div>`);
+                    for(let d=1; d<=28; d++){ 
+                        let cl = d <= 15 ? 'day off' : 'day'; 
+                        document.write(`<div class="${cl}" onclick="if('${cl}'=='day') irHora(${d})">${d}</div>`); 
                     }
                 </script>
             </div>
         </div>
 
-        <div class="p-20" id="p2" style="display:none; max-height: 400px; overflow-y: auto;">
-            <p><b>2. Elegí el horario (10:00 - 20:00)</b></p>
+        <div class="p-20" id="p2" style="display:none;">
+            <p><b>2. Reservar hora</b></p>
             <script>
-                for(let h=10; h<=20; h++) {
-                    document.write(`<div class="slot" onclick="irForm('${h}:00')">${h}:00 hs</div>`);
+                for(let h=10; h<=19; h++) { 
+                    document.write(`<div class="slot" onclick="irForm('${h}:00')">${h}:00 hs</div>`); 
                 }
             </script>
         </div>
 
         <div class="p-20" id="p3" style="display:none;">
-            <p><b>3. Confirmá tus datos</b></p>
+            <p><b>3. Poner tu información</b></p>
             <input type="text" id="nombre" placeholder="Nombre completo">
             <input type="email" id="email" placeholder="Correo electrónico">
             <input type="tel" id="tel" value="+54 ">
-            <button class="btn-final" onclick="enviar()">Confirmar Reserva</button>
+            
+            <div class="aviso-importante">
+                <b>4. Pagar seña: $1.000</b><br>
+                <small>⚠️ IMPORTANTE: Es obligatorio pagar la seña para confirmar el turno.</small>
+            </div>
+
+            <button class="btn-final" onclick="enviar()">Confirmar y Reservar</button>
         </div>
 
         <div class="p-20" id="fin">
-            <div style="font-size: 60px; color: #28a745; margin-bottom: 10px;">✔</div>
-            <h2 style="color:green; margin-top:0;">¡Turno Reservado!</h2>
-            <p style="background:#f0fdf4; padding:15px; border-radius:10px; border: 1px solid #c3e6cb;">
-                <b>El aviso llegó al mail de Kenneth.</b>
+            <div style="font-size: 50px; color: #28a745;">✔</div>
+            <h2 style="color:green; margin-top:0;">¡Solicitud Enviada!</h2>
+            <p>Día: <b id="rf"></b>/02 | Hora: <b id="rh"></b> hs.</p>
+            <p style="background:#fef3c7; padding:10px; border-radius:8px; border: 1px solid #f59e0b;">
+                <b>Recordá:</b> El turno se confirma recién cuando envíes el comprobante de pago de la seña.
             </p>
-            <p>Te espero el <b id="rf"></b>/02 a las <b id="rh"></b> hs.</p>
         </div>
     </div>
 
@@ -112,32 +104,15 @@
         let dSel, hSel;
         function irHora(d){ dSel=d; document.getElementById('p1').style.display='none'; document.getElementById('p2').style.display='block'; }
         function irForm(h){ hSel=h; document.getElementById('p2').style.display='none'; document.getElementById('p3').style.display='block'; }
-        
         function enviar(){
-            const n = document.getElementById('nombre').value;
-            const e = document.getElementById('email').value;
-            if(!n || !e) return alert("Por favor, completá nombre y mail.");
-
-            emailjs.send("service_3ouqxdc", "template_09ypwqn", {
-                user_name: n,
-                user_phone: document.getElementById('tel').value,
-                fecha: dSel,
-                hora: hSel
-            });
-
-            emailjs.send("service_3ouqxdc", "template_s8qcvym", {
-                user_name: n,
-                user_email: e,
-                fecha: dSel,
-                hora: hSel
-            }).then(() => {
-                document.getElementById('rf').innerText = dSel;
-                document.getElementById('rh').innerText = hSel;
-                document.getElementById('p3').style.display='none';
-                document.getElementById('fin').style.display='block';
+            const n = document.getElementById('nombre').value; const e = document.getElementById('email').value;
+            if(!n || !e) return alert("Por favor, completa nombre y mail.");
+            emailjs.send("service_3ouqxdc", "template_09ypwqn", { user_name: n, user_phone: document.getElementById('tel').value, fecha: dSel, hora: hSel });
+            emailjs.send("service_3ouqxdc", "template_s8qcvym", { user_name: n, user_email: e, fecha: dSel, hora: hSel }).then(() => {
+                document.getElementById('rf').innerText = dSel; document.getElementById('rh').innerText = hSel;
+                document.getElementById('p3').style.display='none'; document.getElementById('fin').style.display='block';
             });
         }
     </script>
 </body>
 </html>
-

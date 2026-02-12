@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+            <!DOCTYPE html>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -12,95 +12,104 @@
         body { font-family: 'Segoe UI', sans-serif; background: var(--negro); color: var(--blanco); margin: 0; text-align: center; }
         
         header { 
-            height: 40vh; display: flex; flex-direction: column; justify-content: center; align-items: center; 
+            height: 45vh; display: flex; flex-direction: column; justify-content: center; align-items: center; 
             background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1503951914875-452162b0f3f1?q=80&w=2070&auto=format&fit=crop') center/cover;
         }
 
         .btn-reservar-top { 
             background: var(--azul); color: white; padding: 18px 40px; border-radius: 50px; 
-            text-decoration: none; font-weight: bold; margin-top: 20px; display: inline-block;
-            transition: transform 0.3s ease; box-shadow: 0 4px 15px rgba(0, 97, 255, 0.4);
+            text-decoration: none; font-weight: bold; margin-top: 25px; display: inline-block;
+            transition: 0.3s; box-shadow: 0 4px 15px rgba(0, 97, 255, 0.4);
         }
+        .btn-reservar-top:hover { transform: scale(1.05); background: #0056e0; }
 
-        /* ICONO FLOTANTE WHATSAPP CONFIGURADO */
         .btn-whatsapp {
             position: fixed; width: 60px; height: 60px; bottom: 25px; right: 25px;
             background-color: var(--verde-wa); color: #FFF; border-radius: 50px;
             text-align: center; font-size: 30px; box-shadow: 2px 5px 15px rgba(0,0,0,0.4);
             z-index: 1000; display: flex; align-items: center; justify-content: center;
-            text-decoration: none; transition: transform 0.3s ease;
+            text-decoration: none; transition: 0.3s;
         }
-        .btn-whatsapp:active { transform: scale(0.9); }
 
-        .seccion-intro { padding: 40px 20px; max-width: 800px; margin: 0 auto; }
-        .texto-largo { font-size: 1.1rem; line-height: 1.7; color: #ccc; text-align: justify; background: #111; padding: 25px; border-radius: 15px; border-left: 5px solid var(--azul); margin-bottom: 30px; }
+        .seccion-intro { padding: 50px 20px; max-width: 850px; margin: 0 auto; }
         
-        .tabla-precios { width: 100%; max-width: 600px; margin: 0 auto 40px; border-collapse: collapse; background: #1a1a1a; border-radius: 10px; overflow: hidden; }
-        .tabla-precios th, .tabla-precios td { padding: 15px; text-align: left; border-bottom: 1px solid #333; }
-        .tabla-precios th { background: var(--azul); color: white; }
+        /* TEXTO LARGO Y PERSUASIVO */
+        .texto-largo { font-size: 1.2rem; line-height: 1.9; color: #ddd; text-align: justify; background: #111; padding: 35px; border-radius: 20px; border-left: 6px solid var(--azul); margin-bottom: 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
+        .texto-largo b { color: var(--azul); font-size: 1.3rem; }
 
-        .contenedor-pasos { background: white; color: #333; padding: 25px; border-radius: 20px; text-align: left; max-width: 450px; margin: 0 auto 40px; box-shadow: 0 10px 30px rgba(0,0,0,0.5); }
-        .alerta-roja { color: #d9534f; font-weight: bold; border: 2px solid #d9534f; padding: 10px; border-radius: 10px; text-align: center; margin-top: 15px; }
+        .tabla-precios { width: 100%; max-width: 650px; margin: 0 auto 50px; border-collapse: collapse; background: #1a1a1a; border-radius: 12px; overflow: hidden; font-size: 1.1rem; }
+        .tabla-precios th, .tabla-precios td { padding: 20px; text-align: left; border-bottom: 1px solid #333; }
+        .tabla-precios th { background: var(--azul); color: white; text-transform: uppercase; letter-spacing: 1px; }
 
-        .booking-card { background: white; color: #333; max-width: 450px; margin: 0 auto 100px; border-radius: 20px; overflow: hidden; text-align: left; }
-        .mes-selector { display: flex; justify-content: space-between; align-items: center; padding: 15px 20px; background: #f8f9fa; border-bottom: 1px solid #ddd; font-weight: bold; }
+        .contenedor-pasos { background: white; color: #333; padding: 30px; border-radius: 25px; text-align: left; max-width: 500px; margin: 0 auto 50px; box-shadow: 0 10px 40px rgba(0,0,0,0.6); }
+        .contenedor-pasos h2 { color: var(--azul); margin-top: 0; text-align: center; font-size: 1.8rem; }
+        .alerta-roja { color: #d9534f; font-weight: bold; border: 2px dashed #d9534f; padding: 15px; border-radius: 12px; text-align: center; margin-top: 20px; background: #fff5f5; }
+
+        .booking-card { background: white; color: #333; max-width: 480px; margin: 0 auto 100px; border-radius: 25px; overflow: hidden; text-align: left; box-shadow: 0 20px 60px rgba(0,0,0,0.7); }
+        .mes-selector { display: flex; justify-content: space-between; align-items: center; padding: 20px; background: #f1f3f5; border-bottom: 1px solid #ddd; font-weight: bold; font-size: 1.2rem; }
         
-        .p-20 { padding: 25px; }
-        .days-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px; }
-        .day { padding: 12px 0; text-align: center; background: #ebf3ff; color: var(--azul); border-radius: 50%; cursor: pointer; font-weight: bold; }
+        .p-20 { padding: 30px; }
+        .days-grid { display: grid; grid-template-columns: repeat(7, 1fr); gap: 10px; }
+        .day { padding: 14px 0; text-align: center; background: #ebf3ff; color: var(--azul); border-radius: 50%; cursor: pointer; font-weight: bold; transition: 0.2s; }
+        .day:hover { background: var(--azul); color: white; }
         .day.off { color: #ccc; text-decoration: line-through; cursor: default; background: none; }
-        .slot { border: 2px solid var(--azul); color: var(--azul); padding: 14px; border-radius: 12px; text-align: center; margin-bottom: 12px; font-weight: bold; cursor: pointer; }
-        input { width: 100%; padding: 15px; margin-bottom: 15px; border: 1px solid #ccc; border-radius: 10px; box-sizing: border-box; font-size: 16px; }
-        .btn-final { background: var(--azul); color: white; width: 100%; padding: 18px; border: none; border-radius: 30px; font-weight: bold; cursor: pointer; }
-        #fin { display: none; text-align: center; }
+        
+        .slot { border: 2px solid var(--azul); color: var(--azul); padding: 16px; border-radius: 15px; text-align: center; margin-bottom: 15px; font-weight: bold; cursor: pointer; transition: 0.2s; font-size: 1.1rem; }
+        .slot:hover { background: var(--azul); color: white; }
+        
+        input { width: 100%; padding: 18px; margin-bottom: 20px; border: 1px solid #ccc; border-radius: 12px; box-sizing: border-box; font-size: 17px; }
+        .btn-final { background: var(--azul); color: white; width: 100%; padding: 20px; border: none; border-radius: 40px; font-weight: bold; cursor: pointer; font-size: 1.2rem; transition: 0.3s; }
+        .btn-final:hover { background: #004ecc; letter-spacing: 1px; }
+        
+        #fin { display: none; text-align: center; padding: 40px; }
     </style>
 </head>
 <body>
 
-    <a href="https://wa.me/543804580784" class="btn-whatsapp" target="_blank" title="Contactanos por WhatsApp">
-        <svg width="35" height="35" fill="currentColor" viewBox="0 0 16 16">
-            <path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.06 3.973L0 16l4.104-1.076a7.858 7.858 0 0 0 3.888 1.035h.005c4.454 0 8.049-3.59 8.048-8.029a7.855 7.855 0 0 0-2.345-5.604zM7.994 14.121a6.574 6.574 0 0 1-3.358-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/>
-        </svg>
+    <a href="https://wa.me/543804580784" class="btn-whatsapp" target="_blank">
+        <svg width="35" height="35" fill="currentColor" viewBox="0 0 16 16"><path d="M13.601 2.326A7.854 7.854 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.06 3.973L0 16l4.104-1.076a7.858 7.858 0 0 0 3.888 1.035h.005c4.454 0 8.049-3.59 8.048-8.029a7.855 7.855 0 0 0-2.345-5.604zM7.994 14.121a6.574 6.574 0 0 1-3.358-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.557 6.557 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592zm3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.729.729 0 0 0-.529.247c-.182.198-.691.677-.691 1.654 0 .977.71 1.916.81 2.049.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232z"/></svg>
     </a>
 
     <header>
-        <h1 style="font-size: 3rem; margin:0;">KENTZ BARBER</h1>
-        <p style="letter-spacing: 2px;">ESTILO PROFESIONAL</p>
-        <a href="#pasos-reserva" class="btn-reservar-top">RESERVAR TURNO</a>
+        <h1 style="font-size: 3.5rem; margin:0; letter-spacing: 4px;">KENTZ BARBER</h1>
+        <p style="letter-spacing: 5px; color: var(--azul); font-weight: bold;">MAESTROS EN ESTILO</p>
+        <a href="#pasos-reserva" class="btn-reservar-top">RESERVAR TURNO AHORA</a>
     </header>
 
     <section class="seccion-intro">
         <div class="texto-largo">
-            <p><b>¿Buscás calidad o solo un corte?</b> En <b>Kentz Barbería</b> diseñamos tu imagen con precisión quirúrgica. Especialistas en degradados, perfilado de barba y <b>colorimetría profesional ($30.000)</b>. No dejes tu estilo al azar, elegí a los que saben.</p>
+            <p><b>¿Estás cansado de salir de la barbería sintiendo que te hicieron lo mismo de siempre?</b> En <b>Kentz Barber</b> entendemos que tu cabello y tu barba no son solo pelos; son tu identidad, tu confianza y la primera impresión que le das al mundo. No somos una barbería más del montón, somos un espacio dedicado a la excelencia.</p>
+            <p>Nos especializamos en las técnicas más exigentes de <b>Fade (degradados)</b>, desde un skin fade bien pulido hasta estilos clásicos con tijera que mantienen la elegancia. Si buscás un cambio radical, nuestra <b>colorimetría profesional ($30.000)</b> está diseñada para hombres que no tienen miedo a destacar, utilizando productos de primera que cuidan tu cuero cabelludo.</p>
+            <p>Cada servicio incluye un asesoramiento personalizado. Analizamos la forma de tu rostro y tu tipo de pelo para recomendarte lo que mejor te queda. Aquí no hay cortes "en serie", hay <b>diseño de imagen</b>. Vení a vivir la experiencia de un perfilado de barba con toalla caliente y productos premium. <b>Tu estilo merece el respeto de un profesional. Elevá tu nivel en Kentz Barber.</b></p>
         </div>
 
         <table class="tabla-precios">
-            <tr><th>Servicio</th><th>Precio</th></tr>
-            <tr><td>Corte Solo</td><td>$5.000</td></tr>
-            <tr><td>Corte + Barba</td><td>$6.000</td></tr>
-            <tr><td>Corte + Color</td><td>$30.000</td></tr>
+            <tr><th>Servicio Profesional</th><th>Precio</th></tr>
+            <tr><td>Corte Solo (Técnico)</td><td>$5.000</td></tr>
+            <tr><td>Corte + Diseño de Barba</td><td>$6.000</td></tr>
+            <tr><td>Corte + Colorimetría Global</td><td>$30.000</td></tr>
         </table>
 
         <div id="pasos-reserva" class="contenedor-pasos">
-            <h2 style="color:var(--azul); margin-top:0; text-align:center;">Pasos para Reservar</h2>
-            <p><b>1.</b> Seleccioná tu día del calendario.<br>
-               <b>2.</b> Elegí una hora disponible.<br>
-               <b>3.</b> Completá tus datos personales.<br>
-               <b>4.</b> Aboná la seña de $1.000.</p>
-            <div class="alerta-roja">⚠️ IMPORTANTE: El pago de la seña es obligatorio para confirmar.</div>
+            <h2>Cómo Reservar Tu Lugar</h2>
+            <p><b>Paso 1:</b> Seleccioná el día que mejor te quede en el calendario.<br>
+               <b>Paso 2:</b> Elegí un horario de los que están disponibles.<br>
+               <b>Paso 3:</b> Dejanos tu nombre y WhatsApp para agendarte.<br>
+               <b>Paso 4:</b> Realizá el pago de la seña para congelar tu turno.</p>
+            <div class="alerta-roja">⚠️ ATENCIÓN: La seña de $1.000 es obligatoria. Sin seña no hay reserva confirmada.</div>
         </div>
 
         <div class="booking-card">
             <div class="mes-selector">
-                <span>❮</span> <span>FEBRERO 2026</span> <span>❯</span>
+                <span style="cursor:pointer;">❮</span> <span>FEBRERO 2026</span> <span style="cursor:pointer;">❯</span>
             </div>
 
             <div class="p-20" id="p1">
-                <p><b>1. Seleccioná el día:</b></p>
+                <p><b>1. Seleccioná el día disponible:</b></p>
                 <div class="days-grid">
                     <script>
                         for(let d=1; d<=28; d++){ 
-                            let cl = d <= 14 ? 'day off' : 'day'; 
+                            let cl = d <= 12 ? 'day off' : 'day'; 
                             document.write(`<div class="${cl}" onclick="if('${cl}'=='day') irHora(${d})">${d}</div>`); 
                         }
                     </script>
@@ -108,12 +117,11 @@
             </div>
 
             <div class="p-20" id="p2" style="display:none;">
-                <p><b>2. Seleccioná la hora:</b></p>
+                <p><b>2. Seleccioná tu horario:</b></p>
                 <script>
-                    // PARA TACHAR: cambia el 20 por la hora ocupada (ej: if(h == 15))
                     for(let h=10; h<=20; h++) { 
                         if(h == 20) {
-                            document.write(`<div class="slot" style="text-decoration:line-through; color:#ccc; border-color:#ccc; cursor:not-allowed; opacity: 0.6;">${h}:00 hs (Ocupado)</div>`);
+                            document.write(`<div class="slot" style="text-decoration:line-through; color:#ccc; border-color:#ccc; cursor:not-allowed; opacity: 0.5;">${h}:00 hs (Ocupado)</div>`);
                         } else {
                             document.write(`<div class="slot" onclick="irForm('${h}:00')">${h}:00 hs</div>`);
                         }
@@ -122,17 +130,20 @@
             </div>
 
             <div class="p-20" id="p3" style="display:none;">
-                <p><b>3. Tus Datos:</b></p>
-                <input type="text" id="nombre" placeholder="Nombre completo">
+                <p><b>3. Tus Datos de Contacto:</b></p>
+                <input type="text" id="nombre" placeholder="Tu Nombre Completo">
                 <input type="tel" id="tel" value="+54 9 3804 58-0784">
-                <input type="email" id="email" placeholder="Email">
-                <button class="btn-final" onclick="enviar()">Confirmar Reserva</button>
+                <input type="email" id="email" placeholder="Tu correo electrónico">
+                <button class="btn-final" onclick="enviar()">CONFIRMAR MI TURNO</button>
             </div>
 
             <div class="p-20" id="fin">
-                <h2 style="color:green;">¡Solicitud Enviada!</h2>
-                <p>Día: <b id="rf"></b>/02 | Hora: <b id="rh"></b> hs.</p>
-                <p>Mandá el comprobante de la seña al WhatsApp para confirmar definitivamente tu lugar.</p>
+                <div style="font-size: 60px; color: #28a745;">✔</div>
+                <h2 style="color:green; margin-bottom:10px;">¡Solicitud Recibida!</h2>
+                <p>Te esperamos el <b><span id="rf"></span>/02</b> a las <b><span id="rh"></span> hs</b>.</p>
+                <p style="background: #fff3cd; padding: 15px; border-radius: 10px; border: 1px solid #ffeeba;">
+                    <b>ÚLTIMO PASO:</b> Envianos el comprobante de la seña ($1.000) por WhatsApp ahora mismo para confirmar.
+                </p>
             </div>
         </div>
     </section>
@@ -143,7 +154,7 @@
         function irForm(h){ hSel=h; document.getElementById('p2').style.display='none'; document.getElementById('p3').style.display='block'; }
         function enviar(){
             const n = document.getElementById('nombre').value; const e = document.getElementById('email').value;
-            if(!n || !e) return alert("Completá tus datos");
+            if(!n || !e) return alert("Por favor completá todos los datos.");
             emailjs.send("service_3ouqxdc", "template_09ypwqn", { user_name: n, user_phone: document.getElementById('tel').value, fecha: dSel, hora: hSel });
             emailjs.send("service_3ouqxdc", "template_s8qcvym", { user_name: n, user_email: e, fecha: dSel, hora: hSel }).then(() => {
                 document.getElementById('rf').innerText = dSel; document.getElementById('rh').innerText = hSel;

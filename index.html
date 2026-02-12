@@ -74,7 +74,7 @@
             <div class="days-grid">
                 <script>
                     for(let d=1; d<=28; d++){
-                        let cl = d < 12 ? 'day off' : 'day';
+                        let cl = d < 15 ? 'day off' : 'day';
                         document.write(`<div class="${cl}" onclick="if('${cl}'=='day') irHora(${d})">${d}</div>`);
                     }
                 </script>
@@ -140,3 +140,4 @@
     </script>
 </body>
 </html>
+

@@ -110,7 +110,7 @@
                 <p><b>2. Seleccioná tu horario:</b></p>
                 <script>
                     for(let h=10; h<=20; h++) { 
-                        if(h == 20) {
+                        if(h == 0) {
                             document.write(`<div class="slot" style="text-decoration:line-through; color:#ccc; border-color:#ccc; cursor:not-allowed; opacity: 0.5;">${h}:00 hs (Ocupado)</div>`);
                         } else {
                             document.write(`<div class="slot" onclick="irForm('${h}:00')">${h}:00 hs</div>`);
@@ -151,3 +151,4 @@
     </script>
 </body>
 </html>
+

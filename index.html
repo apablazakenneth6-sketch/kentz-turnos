@@ -86,7 +86,6 @@
                 <p><b>1. Seleccioná el día:</b></p>
                 <div class="days-grid">
                     <script>
-                        // Días de Marzo: del 1 al 8 bloqueados
                         for(let d=1; d<=31; d++){ 
                             let cl = d <= 8 ? 'day off' : 'day'; 
                             document.write(`<div class="${cl}" onclick="if('${cl}'=='day') irHora(${d})">${d}</div>`); 
@@ -98,12 +97,12 @@
             <div class="p-20" id="p2" style="display:none;">
                 <p><b>2. Seleccioná tu horario:</b></p>
                 <script>
-                    // Mañana: 10 a 12
+                    // Mañana: 10:00 a 12:00
                     for(let h=10; h<=12; h++) { 
                         document.write(`<div class="slot" onclick="irForm('${h}:00')">${h}:00 hs</div>`);
                     }
-                    // Tarde: 17 a 22
-                    for(let h=17; h<=22; h++) { 
+                    // Tarde/Noche: 19:00 a 22:00
+                    for(let h=19; h<=22; h++) { 
                         document.write(`<div class="slot" onclick="irForm('${h}:00')">${h}:00 hs</div>`);
                     }
                 </script>
@@ -133,7 +132,6 @@
             const n = document.getElementById('nombre').value; const e = document.getElementById('email').value;
             if(!n || !e) return alert("Por favor completá todos los datos.");
             
-            // Envío a EmailJS con referencia de Marzo (/03)
             emailjs.send("service_3ouqxdc", "template_09ypwqn", { user_name: n, user_phone: document.getElementById('tel').value, fecha: dSel + "/03", hora: hSel });
             emailjs.send("service_3ouqxdc", "template_s8qcvym", { user_name: n, user_email: e, fecha: dSel + "/03", hora: hSel }).then(() => {
                 document.getElementById('rf').innerText = dSel; document.getElementById('rh').innerText = hSel;
